@@ -9,3 +9,4 @@ https://rasmulisone.github.io/games/rascalculator.html
 https://rasmulisone.github.io/games/rasnotepad.html
 https://rasmulisone.github.io/games/rock_paper_scissors.html
 https://rasmulisone.github.io/games/spacecraft_launcher.html
+https://rasmulisone.github.io/games/web/ballcatch/index.html
