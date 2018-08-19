@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Dice Roller for web - Rasmulisone Games</title>
+<script>
+  function roll(amount) {
+    max = (amount * 6);
+    document.getElementById('result').innerHTML = Math.floor(Math.random() * (max - amount + 1)) + amount;
+  }
+</script>
+</head>
+<body>
+<p align=center><a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a></p>
+<h2 align=center>Dice Roller for web</h2>
+<p align=center>
+<input type=number id="amount">
+<input type=button onclick="roll(parseInt(document.getElementById('amount').value))" value="Roll">
+<input type=button onclick="(document.getElementById('amount').value = '')" value="Clear">
+</p>
+<p align=center id="result" style="font-size:40">&nbsp;</p>
+<p align=center>Dice Roller for web - version 1.0<br>
+(C) 2018 Rasmulisone Games<br><br>
+Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
+</body>
+</html>
