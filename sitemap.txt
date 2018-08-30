@@ -11,3 +11,4 @@ https://rasmulisone.github.io/games/rock_paper_scissors.html
 https://rasmulisone.github.io/games/spacecraft_launcher.html
 https://rasmulisone.github.io/games/web/ballcatch/index.html
 https://rasmulisone.github.io/games/web/dice_roller/dice_roller_web.html
+https://rasmulisone.github.io/games/color_app.html
