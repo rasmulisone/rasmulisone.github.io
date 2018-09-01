@@ -1,0 +1,11 @@
+{
+"companyName": "Rasmulisone Games",
+"productName": "BallCatch",
+"dataUrl": "ballcatch.data.unityweb",
+"asmCodeUrl": "ballcatch.asm.code.unityweb",
+"asmMemoryUrl": "ballcatch.asm.memory.unityweb",
+"asmFrameworkUrl": "ballcatch.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Light",
+"backgroundColor": "#808080"
+}
