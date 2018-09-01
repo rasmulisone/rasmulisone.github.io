@@ -2,11 +2,28 @@
 <head>
 <title>Dice Roller for web - Rasmulisone Games</title>
 <script>
+  function getResult(min, max) {
+    result = Math.floor(Math.random() * (max - min + 1)) + min;
+    return(result);
+  }
   function roll(amount) {
     max = (amount * 6);
-    document.getElementById('result').innerHTML = Math.floor(Math.random() * (max - amount + 1)) + amount;
+    document.getElementById('result').innerHTML = getResult(amount, max);
+  }
+  function rollTwo() {
+    first = getResult(1, 6);
+    second = getResult(1, 6);
+    document.getElementById('twoDiceResult').innerHTML = (first + ", " + second);
+    total = (first + second);
+    if (total.toString().length == 2) {
+      document.getElementById('totalResult').innerHTML = ("Total: " + total);
+    }
+    else {
+      document.getElementById('totalResult').innerHTML = ("Total: " + total + "&nbsp;&nbsp;");
+    }
   }
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <p align=center><a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a></p>
@@ -17,7 +34,11 @@
 <input type=button onclick="(document.getElementById('amount').value = '')" value="Clear">
 </p>
 <p align=center id="result" style="font-size:40">&nbsp;</p>
-<p align=center>Dice Roller for web - version 1.0<br>
+<p align=center id="twoDiceResult" style="font-size:40">&nbsp;</p>
+<p align=center id="totalResult" style="font-size:20">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p align=center>
+<input type=button onclick="rollTwo()" value="Roll two dice">
+<br><br>Dice Roller for web - version 1.1<br>
 (C) 2018 Rasmulisone Games<br><br>
 Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
 <!-- Default Statcounter code for Rasmulisone (GitHub)
