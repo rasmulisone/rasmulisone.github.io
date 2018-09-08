@@ -6,15 +6,24 @@
   max-width: 100%;
   height: auto;
 }
+.download {
+  font: 18px Arial;
+}
 .button {
   font: bold 16px Arial;
   text-decoration: none;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 2px 6px 2px 6px;
+  padding: 4px 12px 4px 12px;
   white-space: nowrap;
   border-bottom: 1px solid #FFFFFF;
   border-top: 1px solid #FFFFFF;
+}
+.button:hover {
+  background-color: #333333;
+}
+#buttons {
+  white-space: nowrap;
 }
 .bottom {
   position: fixed;
@@ -32,7 +41,7 @@
 <body>
 <img id="header-logo" src="images/rasmulisone.jpg">
 <hr>
-<a class="button" href=channel.html>YouTube channel</a> <a class="button" href=index.html>Homepage</a>
+<div id="buttons"><a class="button" href=channel.html>YouTube channel</a> <a class="button" href=index.html>Homepage</a></div>
 <hr>
 <h2>Rasmulisone Games</h2>
 <b>Contact/support</b><br>
@@ -44,19 +53,19 @@ More Python programs available <a href="https://repl.it/@rasmulisone">here</a>.<
 Test apps and early versions available <a href="https://drive.google.com/open?id=1aJ1JKEYEi7yr-e1cwAKtpBDRu-QXv-su">here</a>.<br>
 <b>App releases and updates</b><br>
 Notifications are posted onto Twitter: <a href="https://www.twitter.com/rasmulisone">@rasmulisone</a>
-<br><b>Games/apps</b>
-<br><a href="games/ballcatch.html">BallCatch &gt;&gt;&gt;</a>
-<br><a href="games/color_app.html">Color App &gt;&gt;&gt;</a>
-<br><a href="games/dice_roller.html">Dice Roller &gt;&gt;&gt;</a>
-<br><a href="games/randompicker.html">RandomPicker &gt;&gt;&gt;</a>
-<br><a href="games/rasbrowser.html">rasBrowser (alpha) &gt;&gt;&gt;</a>
-<br><a href="games/rascalculator.html">rasCalculator &gt;&gt;&gt;</a>
-<br><a href="games/rasnotepad.html">rasNotepad &gt;&gt;&gt;</a>
-<br><a href="games/rock_paper_scissors.html">Rock Paper Scissors &gt;&gt;&gt;</a>
-<br><a href="games/spacecraft_launcher.html">Spacecraft Launcher (beta) &gt;&gt;&gt;</a>
-<br><b>Web apps</b>
-<br><a href="games/web/ballcatch/index.html">Play BallCatch in browser &gt;&gt;&gt;</a>
-<br><a href="games/web/dice_roller/dice_roller_web.html">Use Dice Roller in browser &gt;&gt;&gt;</a><br>
+<div class=download><b>Games/apps</b></div>
+<a href="games/ballcatch.html" class=download>BallCatch &gt;&gt;&gt;</a>
+<br><a href="games/color_app.html" class=download>Color App &gt;&gt;&gt;</a>
+<br><a href="games/dice_roller.html" class=download>Dice Roller &gt;&gt;&gt;</a>
+<br><a href="games/randompicker.html" class=download>RandomPicker &gt;&gt;&gt;</a>
+<br><a href="games/rasbrowser.html" class=download>rasBrowser (alpha) &gt;&gt;&gt;</a>
+<br><a href="games/rascalculator.html" class=download>rasCalculator &gt;&gt;&gt;</a>
+<br><a href="games/rasnotepad.html" class=download>rasNotepad &gt;&gt;&gt;</a>
+<br><a href="games/rock_paper_scissors.html" class=download>Rock Paper Scissors &gt;&gt;&gt;</a>
+<br><a href="games/spacecraft_launcher.html" class=download>Spacecraft Launcher (beta) &gt;&gt;&gt;</a>
+<div class=download><b>Web apps</b></div>
+<a href="games/web/ballcatch/index.html" class=download>BallCatch for web &gt;&gt;&gt;</a>
+<br><a href="games/web/dice_roller/dice_roller_web.html" class=download>Dice Roller for web &gt;&gt;&gt;</a><br>
 <br><br><br>
 <table class="bottom"><tr><td>(C) 2018 Rasmulisone</td><td align=right><a style="color:#FFFFFF" href=mailto:rasmulisonegames@gmail.com>Contact me</a></td></tr></table>
 <!-- Default Statcounter code for Rasmulisone (GitHub)

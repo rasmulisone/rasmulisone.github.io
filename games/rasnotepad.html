@@ -6,15 +6,24 @@
   max-width: 100%;
   height: auto;
 }
+.download {
+  font: bold 18px Arial;
+}
 .button {
   font: bold 16px Arial;
   text-decoration: none;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 2px 6px 2px 6px;
+  padding: 4px 12px 4px 12px;
   white-space: nowrap;
   border-bottom: 1px solid #FFFFFF;
   border-top: 1px solid #FFFFFF;
+}
+.button:hover {
+  background-color: #333333;
+}
+#buttons {
+  white-space: nowrap;
 }
 .bottom {
   position: fixed;
@@ -32,7 +41,7 @@
 <body>
 <img id="header-logo" src="images/rasmulisone.jpg">
 <hr>
-<a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a>
+<div id="buttons"><a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a></div>
 <hr>
 <a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a>
 <h2>rasNotepad</h2>
@@ -66,8 +75,8 @@ Installing:
 <li>Windows (installer): Run the installer</li>
 <li>Windows (zip): Download and unzip</li>
 </ul>
-<a href="download/rasNotepad_1.1_setup.exe">Download for Windows (installer) &gt;&gt;&gt;</a><br>
-<a href="download/rasNotepad%201.1.zip">Download for Windows (zip) &gt;&gt;&gt;</a><br>
+<a href="download/rasNotepad_1.1_setup.exe" class="download">Download for Windows (installer) &gt;&gt;&gt;</a><br>
+<a href="download/rasNotepad%201.1.zip" class="download">Download for Windows (zip) &gt;&gt;&gt;</a><br>
 All versions:<br>
 <a href="download/rasNotepad_1.1_setup.exe">Download 1.1 for Windows (installer) &gt;&gt;&gt;</a><br>
 <a href="download/rasNotepad%201.1.zip">Download 1.1 for Windows (zip) &gt;&gt;&gt;</a><br>

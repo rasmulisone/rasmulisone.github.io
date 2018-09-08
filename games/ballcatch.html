@@ -6,15 +6,24 @@
   max-width: 100%;
   height: auto;
 }
+.download {
+  font: bold 18px Arial;
+}
 .button {
   font: bold 16px Arial;
   text-decoration: none;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 2px 6px 2px 6px;
+  padding: 4px 12px 4px 12px;
   white-space: nowrap;
   border-bottom: 1px solid #FFFFFF;
   border-top: 1px solid #FFFFFF;
+}
+.button:hover {
+  background-color: #333333;
+}
+#buttons {
+  white-space: nowrap;
 }
 .bottom {
   position: fixed;
@@ -32,7 +41,7 @@
 <body>
 <img id="header-logo" src="images/rasmulisone.jpg">
 <hr>
-<a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a>
+<div id="buttons"><a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a></div>
 <hr>
 <a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a>
 <h2>BallCatch</h2>
@@ -103,10 +112,10 @@ Installing:
 <li>Windows (installer): Download and start the .exe file</li>
 <li>Windows (zip): Download, unzip and start the .exe file</li>
 </ul>
-<a href="web/ballcatch/index.html"><font size=+2>Play in browser &gt;&gt;&gt;</font></a><br>
-<a href="download/BallCatch_1.4.1.apk"><font size=+2>Download for Android &gt;&gt;&gt;</font></a><br>
-<a href="download/BallCatch_1.4.1_setup.exe"><font size=+2>Download for Windows (installer) &gt;&gt;&gt;</font></a><br>
-<a href="download/BallCatch%201.4.1%20Windows.zip"><font size=+2>Download for Windows (zip) &gt;&gt;&gt;</font></a><br>
+<a href="web/ballcatch/index.html" class="download">Play in browser &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch_1.4.1.apk" class="download">Download for Android &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch_1.4.1_setup.exe" class="download">Download for Windows (installer) &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch%201.4.1%20Windows.zip" class="download">Download for Windows (zip) &gt;&gt;&gt;</a><br>
 All versions:<br>
 <a href="web/ballcatch/index.html">Play 1.4.1 in browser &gt;&gt;&gt;</a><br>
 <a href="download/BallCatch_1.4.1.apk">Download 1.4.1 for Android &gt;&gt;&gt;</a><br>

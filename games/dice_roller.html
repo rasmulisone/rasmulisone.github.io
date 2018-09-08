@@ -6,15 +6,24 @@
   max-width: 100%;
   height: auto;
 }
+.download {
+  font: bold 18px Arial;
+}
 .button {
   font: bold 16px Arial;
   text-decoration: none;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 2px 6px 2px 6px;
+  padding: 4px 12px 4px 12px;
   white-space: nowrap;
   border-bottom: 1px solid #FFFFFF;
   border-top: 1px solid #FFFFFF;
+}
+.button:hover {
+  background-color: #333333;
+}
+#buttons {
+  white-space: nowrap;
 }
 .bottom {
   position: fixed;
@@ -32,7 +41,7 @@
 <body>
 <img id="header-logo" src="images/rasmulisone.jpg">
 <hr>
-<a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a>
+<div id="buttons"><a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a></div>
 <hr>
 <a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a>
 <h2>Dice Roller</h2>
@@ -78,9 +87,9 @@ Installing:
 <li>Android: Download and install the apk</li>
 <li>Python 3: Just download the file</li>
 </ul>
-<a href="web/dice_roller/dice_roller_web.html">Use in browser &gt;&gt;&gt;</a><br>
-<a href="download/Dice%20Roller%201.4.apk">Download for Android &gt;&gt;&gt;</a><br>
-<a href="download/diceroller-1.1.py">Download for Python 3 &gt;&gt;&gt;</a><br>
+<a href="web/dice_roller/dice_roller_web.html" class="download">Use in browser &gt;&gt;&gt;</a><br>
+<a href="download/Dice%20Roller%201.4.apk" class="download">Download for Android &gt;&gt;&gt;</a><br>
+<a href="download/diceroller-1.1.py" class="download">Download for Python 3 &gt;&gt;&gt;</a><br>
 All versions:<br>
 <a href="download/Dice%20Roller%201.4.apk">Download 1.4 for Android &gt;&gt;&gt;</a><br>
 <a href="download/diceroller-1.1.py">Download 1.1 for Python 3 &gt;&gt;&gt;</a><br>
