@@ -49,8 +49,13 @@ A simple game with balls falling from top and you have to catch them. <a href="h
 Made with: Unity 5.6.0 - 5.6.6, C#<br>
 Available platforms: Android (4.4 KitKat and up), Windows, web<br>
 Tested platforms: Android 7.0 Nougat, Windows 10, Android 8.1 Oreo, Mozilla Firefox on Windows 10<br>
-Latest version: 1.4.1<br>
+Latest version: 1.4.2<br>
 What's new:<br>
+1.4.2
+<ul>
+<li>Bugfix: if you lose while the "half speed" powerup is on, the counter will continue below zero seconds after you start a new game</li>
+<li>The "half speed" counter now shows "OFF" at start instead of "0 s"</li>
+</ul>
 1.4.1
 <ul>
 <li>Bugfix: when you start a new game, the balls immediately fall at the speed they were falling when you lost if you haven't restarted the game</li>
@@ -93,6 +98,7 @@ What's new:<br>
 <ul>
 <li>Each ball now spawns in a random color</li>
 <li>Added quit button</li>
+<li>Switched Unity version from 5.6.1 to 5.6.6</li>
 <li>Android: reduced app size by disabling Android TV and x86 support</li>
 <li>Android: changed minimum SDK version from 16 (4.1 Jelly Bean) to 19 (4.4 KitKat)</li>
 </ul>
@@ -103,7 +109,7 @@ What's new:<br>
 </ul>
 Known bugs / missing features:
 <ul>
-<li>If you lose while the "half speed" powerup is on, the counter will continue below zero seconds after you start a new game (1.4-, fix coming in a couple of days)</li>
+<li><del>If you lose while the "half speed" powerup is on, the counter will continue below zero seconds after you start a new game</del> (1.4 - 1.4.1, fixed in 1.4.2)</li>
 <li><del>When you start a new game, the balls immediately fall at the speed they were falling when you lost if you haven't restarted the game</del> (1.4, fixed in 1.4.1)</li>
 <li><del>The Rasmulisone Games logo is stretched</del> (1.2.1, fixed in 1.2.2)</li>
 </ul>
@@ -114,11 +120,15 @@ Installing:
 <li>Windows (zip): Download, unzip and start the .exe file</li>
 </ul>
 <a href="web/ballcatch/index.html" class="download">Play in browser &gt;&gt;&gt;</a><br>
-<a href="download/BallCatch_1.4.1.apk" class="download">Download for Android &gt;&gt;&gt;</a><br>
-<a href="download/BallCatch_1.4.1_setup.exe" class="download">Download for Windows (installer) &gt;&gt;&gt;</a><br>
-<a href="download/BallCatch%201.4.1%20Windows.zip" class="download">Download for Windows (zip) &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch_1.4.2.apk" class="download">Download for Android &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch_1.4.2_setup.exe" class="download">Download for Windows (installer) &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch%201.4.2%20Windows.zip" class="download">Download for Windows (zip) &gt;&gt;&gt;</a><br>
 All versions:<br>
-<a href="web/ballcatch/index.html">Play 1.4.1 in browser &gt;&gt;&gt;</a><br>
+<a href="web/ballcatch/index.html">Play 1.4.2 in browser &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch_1.4.2.apk">Download 1.4.2 for Android &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch_1.4.2_setup.exe">Download 1.4.2 for Windows (installer) &gt;&gt;&gt;</a><br>
+<a href="download/BallCatch%201.4.2%20Windows.zip">Download 1.4.2 for Windows (zip) &gt;&gt;&gt;</a><br>
+<a href="web/ballcatch-1.4.1/index.html">Play 1.4.1 in browser &gt;&gt;&gt;</a><br>
 <a href="download/BallCatch_1.4.1.apk">Download 1.4.1 for Android &gt;&gt;&gt;</a><br>
 <a href="download/BallCatch_1.4.1_setup.exe">Download 1.4.1 for Windows (installer) &gt;&gt;&gt;</a><br>
 <a href="download/BallCatch%201.4.1%20Windows.zip">Download 1.4.1 for Windows (zip) &gt;&gt;&gt;</a><br>
