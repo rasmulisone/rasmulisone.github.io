@@ -2,6 +2,38 @@
 <head>
 <title>Dice Roller for web - Rasmulisone Games</title>
 <script>
+  function changeTheme(button) {
+    if (button == "0") {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("darktheme") == "1") {
+          Dark();
+        }
+        else {
+          Light();
+        }
+      }
+    }
+    else {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("darktheme") == "1") {
+          Light();
+          localStorage.setItem("darktheme", "0");
+        }
+        else {
+          Dark();
+        }
+      }
+    }
+  }
+  function Dark() {
+    document.body.style.background = "#131313";
+    document.body.style.color = "white";
+    localStorage.setItem("darktheme", "1");
+  }
+  function Light() {
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+  }
   function getResult(min, max) {
     result = Math.floor(Math.random() * (max - min + 1)) + min;
     return(result);
@@ -25,7 +57,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body onLoad="changeTheme(0)">
 <p align=center><a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a></p>
 <h2 align=center>Dice Roller for web</h2>
 <p align=center>
@@ -38,7 +70,9 @@
 <p align=center id="totalResult" style="font-size:20">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p align=center>
 <input type=button onclick="rollTwo()" value="Roll two dice">
-<br><br>Dice Roller for web - version 1.1.1<br>
+<br><input type=button onclick="changeTheme(1)" value="Change theme">
+<br>By clicking the "Change theme" button you accept your theme preference being saved to your HTML web storage for this site to read later.
+<br><br>Dice Roller for web - version 1.2<br>
 (C) 2018 Rasmulisone Games<br><br>
 Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
 <!-- Default Statcounter code for Rasmulisone (GitHub)
