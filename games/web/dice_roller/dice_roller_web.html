@@ -2,7 +2,19 @@
 <head>
 <title>Dice Roller for web - Rasmulisone Games</title>
 <script>
+  var usdt = false;
+  function Android() {
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1;
+	return isAndroid;
+  }
   function changeTheme(button) {
+    if (Android() == true) {
+	  var meta = document.createElement('meta');
+      meta.setAttribute("name", "theme-color");
+      meta.setAttribute("content", "white");
+      document.getElementsByTagName('head')[0].appendChild(meta);
+	}
     if (button == "0") {
       if (typeof(Storage) !== "undefined") {
         if (localStorage.getItem("darktheme") == "1") {
@@ -23,16 +35,34 @@
           Dark();
         }
       }
+	  else {
+	    if (usdt) {
+		  usdt = false;
+		  Light();
+		}
+		else {
+		  usdt = true;
+		  Dark();
+		}
+	  }
     }
   }
   function Dark() {
     document.body.style.background = "#131313";
     document.body.style.color = "white";
-    localStorage.setItem("darktheme", "1");
+	localStorage.setItem("darktheme", "1");
+	if (Android() == true) {
+	  var color = document.querySelector("meta[name=theme-color]");
+      color.setAttribute("content", "#333333");
+	}
   }
   function Light() {
     document.body.style.background = "white";
     document.body.style.color = "black";
+	if (Android() == true) {
+	  var color = document.querySelector("meta[name=theme-color]");
+      color.setAttribute("content", "white");
+	}
   }
   function getResult(min, max) {
     result = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -70,9 +100,9 @@
 <p align=center id="totalResult" style="font-size:20">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p align=center>
 <input type=button onclick="rollTwo()" value="Roll two dice">
-<br><input type=button onclick="changeTheme(1)" value="Change theme">
+<br><br><input type=button onclick="changeTheme(1)" value="Change theme">
 <br>By clicking the "Change theme" button you accept your theme preference being saved to your HTML web storage for this site to read later.
-<br><br>Dice Roller for web - version 1.2<br>
+<br><br>Dice Roller for web - version 1.2.1<br>
 (C) 2018 Rasmulisone Games<br><br>
 Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
 <!-- Default Statcounter code for Rasmulisone (GitHub)
