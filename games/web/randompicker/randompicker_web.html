@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>RandomPicker for web - Rasmulisone Games</title>
+<script>
+  var usdt = false;
+  function Android() {
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1;
+	return isAndroid;
+  }
+  function changeTheme(button) {
+    if (Android() == true) {
+	  var meta = document.createElement('meta');
+      meta.setAttribute("name", "theme-color");
+      meta.setAttribute("content", "white");
+      document.getElementsByTagName('head')[0].appendChild(meta);
+	}
+    if (button == "0") {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("darktheme") == "1") {
+          Dark();
+        }
+        else {
+          Light();
+        }
+      }
+    }
+    else {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("darktheme") == "1") {
+          Light();
+          localStorage.setItem("darktheme", "0");
+        }
+        else {
+          Dark();
+        }
+      }
+	  else {
+	    if (usdt) {
+		  usdt = false;
+		  Light();
+		}
+		else {
+		  usdt = true;
+		  Dark();
+		}
+	  }
+    }
+  }
+  function Dark() {
+    document.body.style.background = "#131313";
+    document.body.style.color = "white";
+	localStorage.setItem("darktheme", "1");
+	if (Android() == true) {
+	  var color = document.querySelector("meta[name=theme-color]");
+      color.setAttribute("content", "#333333");
+	}
+  }
+  function Light() {
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+	if (Android() == true) {
+	  var color = document.querySelector("meta[name=theme-color]");
+      color.setAttribute("content", "white");
+	}
+  }
+  function randomLine() {
+	var lines = document.getElementById("textbox").value.split("\n");
+	var choice = Math.floor(Math.random() * lines.length);
+	var resultText;
+	if (lines[choice] != "") {
+	  resultText = lines[choice];
+	}
+	else {
+	  resultText = "Insert some options!";
+	}
+	document.getElementById("result").innerHTML = resultText;
+  }
+  function pickNum() {
+    var first = parseInt(document.getElementById("first").value);
+	var second = parseInt(document.getElementById("second").value);
+	var amount = parseInt(document.getElementById("amount").value);
+	var resultText;
+	if ((isNaN(first) == false) && (isNaN(second) == false) && (isNaN(amount) == false)) {
+	  var times = 0;
+	  var numbers = new Array();
+	  while(times < amount) {
+	    numbers.push(Math.floor(Math.random() * (second - first + 1)) + first);
+		times++;
+	  }
+	  resultText = numbers.join(", ");
+	}
+	if (isNaN(first) || isNaN(second) || isNaN(amount)) {
+	  resultText = "Insert all numbers!";
+	}
+	document.getElementById("numResult").innerHTML = resultText;
+  }
+  function Clear() {
+    document.getElementById("first").value = "";
+	document.getElementById("second").value = "";
+	document.getElementById("amount").value = "";
+  }
+  function dClear() {
+    document.getElementById("dAmount").value = "";
+	document.getElementById("digits").value = "";
+  }
+  function Generate() {
+    var dgs = parseInt(document.getElementById("digits").value);
+	var amount = parseInt(document.getElementById("dAmount").value);
+	var resultText;
+	if ((isNaN(dgs) == false) && (isNaN(amount) == false)) {
+	  var times = 0;
+	  var times_ = 0;
+	  var numbers = new Array();
+	  var numbers_ = new Array();
+	  while(times < amount) {
+	    while(times_ < dgs) {
+	      numbers_.push(Math.floor(Math.random() * 10));
+		  times_++;
+		}
+		numbers.push(numbers_.join(""));
+		numbers_ = [];
+		times_ = 0;
+		times++;
+	  }
+	  resultText = numbers.join(", ");
+	}
+	if (isNaN(amount) || isNaN(dgs)) {
+	  resultText = "Insert all numbers!";
+	}
+	document.getElementById("dResult").innerHTML = resultText;
+  }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onLoad="changeTheme(0)">
+<p align=center><a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a></p>
+<h2 align=center>RandomPicker for web</h2>
+<hr>
+<p align=center>
+<textarea id="textbox" rows=10 cols=35></textarea>
+<br>Insert options, each on a different line<br>
+<input type=button onclick="randomLine()" value="Pick">
+<input type=button onclick="(document.getElementById('textbox').value = '')" value="Clear">
+</p>
+<p align=center id="result" style="font-size:30">&nbsp;</p>
+<hr>
+<p align=center id="numResult" style="font-size:40">&nbsp;</p>
+<p align=center>
+Pick <input type=number id="amount" value=1> number(s) from <input type=number id="first"> to <input type=number id="second">
+<br><input type=button onclick="pickNum()" value="Pick">
+<input type=button onclick="Clear()" value="Clear"></p>
+<hr>
+<p align=center id="dResult" style="font-size:40">&nbsp;</p>
+<p align=center>
+Generate <input type=number id="dAmount" value=1> number(s) with <input type=number id="digits"> digit(s)<br>
+<input type=button onclick="Generate()" value="Generate"><input type=button onclick="dClear()" value="Clear">
+</p>
+<hr><p align=center><input type=button onclick="changeTheme(1)" value="Change theme">
+<br>By clicking the "Change theme" button you accept your theme preference being saved to your HTML web storage for this site to read later.
+<br><br>RandomPicker for web - version 1.0<br>
+(C) 2018 Rasmulisone Games<br><br>
+Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/randompicker.html">here</a>.</p>
+<!-- Default Statcounter code for Rasmulisone (GitHub)
+https://rasmulisone.github.io -->
+<script type="text/javascript">
+var sc_project=11797852; 
+var sc_invisible=1; 
+var sc_security="0af1cde7"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11797852/0/0af1cde7/1/" alt="Web
+Analytics"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>
