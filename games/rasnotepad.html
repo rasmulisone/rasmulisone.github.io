@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -46,11 +53,18 @@
 <a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a>
 <h2>rasNotepad</h2>
 A simple notepad application for Windows. Includes new, open, save as, copy, paste, cut, undo, redo and select all, and an About window including a link to this site.
-<br><b>NOTE: Before installing a new version, you have to remove the program in Control Panel first or the Start Menu link will start the old version.
+<br><b>NOTE: If you've installed the app with the zip, you have to remove the program in Control Panel before installing a new version or the Start Menu link will start the old version.
 <br>NOTE 2: Antivirus programs only think rasNotepad.exe is dangerous because I haven't signed the publish builds in Visual Studio (it doesn't work for some reason).</b><br>
 Made with: C#, Windows Forms<br>
-Available platforms: Windows<br>
-Tested platforms: Windows 10<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Windows</td><td>10</td>
+</tr>
+</table>
 Latest version: 1.1<br>
 What's new:<br>
 1.1

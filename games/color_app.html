@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -47,9 +54,19 @@
 <h2>Color App</h2>
 An app that picks a random color and allows the user to copy the hex code. Also features an autochange mode.<br>
 Made with: Unity 5.6.6, C# (Android version), Python 3 (Python version)<br>
-Available platforms: Android (4.4 KitKat and up), Python 3 (packages required: tkinter, colorutils)<br>
-Tested platforms: Android 8.1 Oreo, Python 3.7 on Windows 10, Python 3.6 on Lubuntu 18.04<br>
-Latest version:1.0<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Android (4.4+)</td><td>8.1 Oreo<br>9.0 Pie</td>
+</tr>
+<tr>
+<td>Python 3 (packages required: tkinter, colorutils)</td><td>3.7 on Windows<br>3.6 on Lubuntu</td>
+</tr>
+</table>
+Latest version: 1.0<br>
 What's new:<br>
 1.0
 <ul>

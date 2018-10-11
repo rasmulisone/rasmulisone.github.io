@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -47,8 +54,15 @@
 <h2>rasCalculator</h2>
 A simple Python 3 command line calculator with +, -, *, /, exp, sqrt, %of and -%.<br>
 Made with: Python 3<br>
-Available platforms: Python 3 (packages required: math)<br>
-Tested platforms: QPython3 on Android 7.0 Nougat<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Python 3 (packages required: math)</td><td>3.6 on Windows<br>QPython3 (3.2) on Android</td>
+</tr>
+</table>
 Latest version: 1.0.1<br>
 What's new:<br>
 1.0.1

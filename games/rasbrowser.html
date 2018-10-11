@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -47,8 +54,15 @@
 <h2>rasBrowser</h2>
 A simple Android browser with homepage and search engine settings.<br>
 Made with: Sketchware<br>
-Available platforms: Android<br>
-Tested platforms: Android 7.0 Nougat, Android 4.4 KitKat, Android 8.1 Oreo<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Android</td><td>4.4 KitKat<br>7.0 Nougat<br>8.1 Oreo<br>9.0 Pie</td>
+</tr>
+</table>
 Latest version: 0.1.1 alpha<br>
 What's new:<br>
 0.1.1 alpha

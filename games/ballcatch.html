@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -47,8 +54,21 @@
 <h2>BallCatch</h2>
 A simple game with balls falling from top and you have to catch them. <a href="https://rasmulisone.github.io/manuals/ballcatch.html">Game manual &gt;&gt;&gt;</a><br>
 Made with: Unity 5.6.0 - 5.6.6, C#<br>
-Available platforms: Android (4.4 KitKat and up), Windows, web<br>
-Tested platforms: Android 7.0 Nougat, Windows 10, Android 8.1 Oreo, Mozilla Firefox on Windows 10<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Android (4.4+)</td><td>7.0 Nougat<br>8.1 Oreo<br>9.0 Pie</td>
+</tr>
+<tr>
+<td>Windows</td><td>10</td>
+</tr>
+<tr>
+<td>Web</td><td>Mozilla Firefox 62 on Windows</td>
+</tr>
+</table>
 Latest version: 1.4.2<br>
 What's new:<br>
 1.4.2

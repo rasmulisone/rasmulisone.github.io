@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -47,8 +54,15 @@
 <h2>Spacecraft Launcher</h2>
 An automatic 3D spacecraft launcher app with multiple views and a few options to customize the launch. MECO (main engine cutoff) should be at around T+ 0:4:22 (version 0.3 beta and up).<br>
 Made with: Unity 5.6.1, C#<br>
-Available platforms: Windows<br>
-Tested platforms: Windows 10<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Windows</td><td>10</td>
+</tr>
+</table>
 Latest version: 0.3 beta<br>
 What's new:<br>
 0.3 beta

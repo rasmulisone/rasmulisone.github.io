@@ -34,6 +34,13 @@
   color: #FFFFFF;
   padding: 6px;
 }
+table:not(.bottom), th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.platforms {
+  text-align: left;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel='icon' href='images/favicon.png' type='image/png'/>
@@ -47,8 +54,21 @@
 <h2>Dice Roller</h2>
 A simple dice roller application with unlimited number of dice and on Android and web a separate two-dice mode.<br>
 Made with: Sketchware (Android version) / Python 3 (Python 3 version) / HTML, CSS, JavaScript (web version)<br>
-Available platforms: Android, Python 3 (packages required: random), web<br>
-Tested platforms: Android 7.0 Nougat, QPython3 on Android 7.0 Nougat, Python 3.5 - 3.7 on Windows 10, Android 4.4 KitKat, Android 8.1 Oreo, Mozilla Firefox 62 on Windows 10, Google Chrome 69-71 on Android 8.1 Oreo<br>
+Available platforms:
+<table>
+<tr>
+<th class="platforms">Platform</th><th class="platforms">Tested</th>
+</tr>
+<tr>
+<td>Android</td><td>4.4 KitKat<br>7.0 Nougat<br>8.1 Oreo<br>9.0 Pie</td>
+</tr>
+<tr>
+<td>Python 3 (packages required: random)</td><td>3.5 on Windows<br>3.6 on Windows<br>3.7 on Windows<br>QPython3 (3.2) on Android</td>
+</tr>
+<tr>
+<td>Web</td><td>Mozilla Firefox 62 on Windows<br>Google Chrome 69 on Android<br>Google Chrome 70 on Android<br>Google Chrome 71 on Android<br>Google Chrome 69 on iOS</td>
+</tr>
+</table>
 Latest version: 1.4.1 (Android) / 1.1 (Python) / 1.2.1 (web)<br>
 What's new:<br>
 1.2.1 (web)
