@@ -64,17 +64,22 @@
       color.setAttribute("content", "white");
 	}
   }
-  function getResult(min, max) {
-    result = Math.floor(Math.random() * (max - min + 1)) + min;
+  function getResult() {
+    result = Math.floor(Math.random() * 6) + 1;
     return(result);
   }
   function roll(amount) {
-    max = (amount * 6);
-    document.getElementById('result').innerHTML = getResult(amount, max);
+	timesdone = 0;
+	total = 0;
+	while (timesdone < amount) {
+	  total += getResult();
+	  timesdone++;
+	}
+    document.getElementById('result').innerHTML = total;
   }
   function rollTwo() {
-    first = getResult(1, 6);
-    second = getResult(1, 6);
+    first = getResult();
+    second = getResult();
     document.getElementById('twoDiceResult').innerHTML = (first + ", " + second);
     total = (first + second);
     if (total.toString().length == 2) {
@@ -102,7 +107,7 @@
 <input type=button onclick="rollTwo()" value="Roll two dice">
 <br><br><input type=button onclick="changeTheme(1)" value="Change theme">
 <br>By clicking the "Change theme" button you accept your theme preference being saved to your HTML web storage for this site to read later.
-<br><br>Dice Roller for web - version 1.2.1<br>
+<br><br>Dice Roller for web - version 1.2.2<br>
 (C) 2018 Rasmulisone Games<br><br>
 Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
 <!-- Default Statcounter code for Rasmulisone (GitHub)
