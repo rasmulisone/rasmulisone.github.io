@@ -3,6 +3,7 @@
 <title>Dice Roller for web - Rasmulisone Games</title>
 <script>
   var usdt = false;
+  var totalResultOn = new Boolean(true);
   function Android() {
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1;
@@ -16,6 +17,7 @@
       document.getElementsByTagName('head')[0].appendChild(meta);
 	}
     if (button == "0") {
+	  checkboxCheck();
       if (typeof(Storage) !== "undefined") {
         if (localStorage.getItem("darktheme") == "1") {
           Dark();
@@ -71,23 +73,86 @@
   function roll(amount) {
 	timesdone = 0;
 	total = 0;
+	var list = new Array();
 	while (timesdone < amount) {
-	  total += getResult();
+	  var thisResult = getResult();
+	  total += thisResult;
+	  list.push(thisResult);
 	  timesdone++;
 	}
-    document.getElementById('result').innerHTML = total;
+	if (totalResultOn == true) {
+      document.getElementById('result').innerHTML = total;
+	  document.getElementById('totalResult_').innerHTML = "&nbsp;";
+	}
+	else {
+	  if (amount > 1) {
+	    document.getElementById('result').innerHTML = list.join(", ");
+	    document.getElementById('totalResult_').innerHTML = ("Total: " + total.toString());
+	  }
+	  else {
+	    document.getElementById('result').innerHTML = total;
+	    document.getElementById('totalResult_').innerHTML = "&nbsp;";
+	  }
+	}
   }
-  function rollTwo() {
-    first = getResult();
-    second = getResult();
-    document.getElementById('twoDiceResult').innerHTML = (first + ", " + second);
-    total = (first + second);
-    if (total.toString().length == 2) {
-      document.getElementById('totalResult').innerHTML = ("Total: " + total);
-    }
-    else {
-      document.getElementById('totalResult').innerHTML = ("Total: " + total + "&nbsp;&nbsp;");
-    }
+  function checkTotal() {
+    var totalcheck = document.getElementById('totalcheck');
+	var individualcheck = document.getElementById('individualcheck');
+	if (totalcheck.checked == true) {
+	  individualcheck.checked = false;
+	  SetBoolean(1);
+	}
+	else {
+	  totalcheck.checked = true;
+	}
+  }
+  function checkIndividual() {
+    var totalcheck = document.getElementById('totalcheck');
+	var individualcheck = document.getElementById('individualcheck');
+	if (individualcheck.checked == true) {
+	  totalcheck.checked = false;
+	  SetBoolean(0);
+	}
+	else {
+	  individualcheck.checked = true;
+	}
+  }
+  function checkboxCheck() {
+    var totalcheck = document.getElementById('totalcheck');
+	var individualcheck = document.getElementById('individualcheck');
+    if (typeof(Storage) !== undefined) {
+	  if (localStorage.getItem("totalresult") == "0") {
+	    totalcheck.checked = false;
+		individualcheck.checked = true;
+		SetBoolean(0);
+	  }
+	  else {
+	    totalcheck.checked = true;
+		individualcheck.checked = false;
+		SetBoolean(1);
+	  }
+	}
+	else {
+	  totalcheck.checked = true;
+	  individualcheck.checked = false;
+	  SetBoolean(1);
+	}
+  }
+  function SetBoolean(bool) {
+    if (bool == 1) {
+	  totalResultOn = true;
+	}
+	else {
+	  totalResultOn = false;
+	}
+    if (typeof(Storage) !== undefined) {
+	  if (totalResultOn == true) {
+	    localStorage.setItem("totalresult", "1");
+	  }
+	  else {
+	    localStorage.setItem("totalresult", "0");
+	  }
+	}
   }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,19 +161,21 @@
 <p align=center><a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a></p>
 <h2 align=center>Dice Roller for web</h2>
 <p align=center>
-<input type=number id="amount" value="1">
+<input type=button onclick="(document.getElementById('amount').value = '1')" value="1">
+<input type=button onclick="(document.getElementById('amount').value = '2')" value="2">
+<input type=button onclick="(document.getElementById('amount').value = '5')" value="5">
+<br><br><input type=number id="amount" value="1">
 <input type=button onclick="roll(parseInt(document.getElementById('amount').value))" value="Roll">
 <input type=button onclick="(document.getElementById('amount').value = '')" value="Clear">
+<br><input type=checkbox onclick="checkTotal()" id="totalcheck">Total <input type=checkbox onclick="checkIndividual()" id="individualcheck">Individual
 </p>
 <p align=center id="result" style="font-size:40">&nbsp;</p>
-<p align=center id="twoDiceResult" style="font-size:40">&nbsp;</p>
-<p align=center id="totalResult" style="font-size:20">Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p align=center id="totalResult_" style="font-size:20">&nbsp;</p>
 <p align=center>
-<input type=button onclick="rollTwo()" value="Roll two dice">
 <br><br><input type=button onclick="changeTheme(1)" value="Change theme">
-<br>By clicking the "Change theme" button you accept your theme preference being saved to your HTML web storage for this site to read later.
-<br><br>Dice Roller for web - version 1.2.2<br>
-(C) 2018 Rasmulisone Games<br><br>
+<br>By clicking the "Change theme" button or the result mode checkboxes you accept your theme / result mode preference being saved to your HTML web storage for this site to read later.
+<br><br>Dice Roller for web - version 1.3<br>
+(C) 2019 Rasmulisone Games<br><br>
 Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
 <!-- Default Statcounter code for Rasmulisone (GitHub)
 https://rasmulisone.github.io -->
