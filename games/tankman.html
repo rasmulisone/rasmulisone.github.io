@@ -4,40 +4,58 @@
 <style>
 .download {
   font: bold 18px Arial;
+  color: orange;
+}
+@media only screen and (min-width: 350px) {
+  .download {
+    font: bold 25px Arial;
+  }
 }
 td {
-  width: 200px
+  width: 200px;
 }
-.outline {
+#tankman {
   -webkit-filter: drop-shadow(3px 3px 0 black)
                   drop-shadow(-3px -3px 0 black);
   filter: drop-shadow(3px 3px 0 black) 
           drop-shadow(-3px -3px 0 black);
-  max-width: 100%
-  height: auto
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 body {
-  background-image: url(images/bg.png)
+  background-image: url(images/bg.png);
 }
-a {
-  color: white
+@media all and (max-width:630px) {
+  tr {
+      display: table;
+	  width: 100%;
+  }               
+  td {
+	  display: table-row;
+  }           
+}
+.logos {
+  max-width: 100%;
+  height: auto;
 }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <p align=center>
-<img class=outline width=300px src=images/tankman.png><br>
+<img id=tankman src=images/tankman.png><br>
 <a class=download href=download/Tankman_Windows_0.2.0.zip>Download for Windows &gt;&gt;&gt;</a>
 <br><a class=download href=download/Tankman_Mobile_0.2.0.apk>Download for Android &gt;&gt;&gt;</a>
+</p>
 <div align=center style="overflow-x:auto;">
 <table>
 <tr>
-<td><img width=200 src=images/lainegames.png></td>
-<td><img width=200 src=images/rasmulisonegames.png></td>
-<td><div><div align=center><img class=maeltek width=105 src=images/maeltek.png></div></div></td>
+<td><img width=200 class=logos src=images/lainegames.png></td>
+<td><img width=200 class=logos src=images/rasmulisonegames.png></td>
+<td><div><div align=center><img class=maeltek width=105 class=logos src=images/maeltek.png></div></div></td>
 </tr>
 </table>
 </div>
-</p>
 </body>
 </html>
