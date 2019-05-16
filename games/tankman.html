@@ -15,7 +15,7 @@
   font: bold 18px Arial;
   color: orange;
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 470px) {
   .download {
     font: bold 25px Arial;
   }
@@ -37,11 +37,11 @@ body {
   color: white;
 }
 @media all and (max-width:630px) {
-  tr {
+  tr:not(.bottomr) {
       display: table;
 	  width: 100%;
   }               
-  td {
+  td:not(.bottomd) {
 	  display: table-row;
   }           
 }
@@ -69,16 +69,29 @@ iframe {
   max-width: 600px;
   height: auto;
 }
+.link {
+  color: orange;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 6px;
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <p align=center>
 <img id=tankman src=images/tankman.png><br>
-<a class=download href=download/Tankman_0.2.3_setup.exe>Download for Windows (installer) (version 0.2.3) &gt;&gt;&gt;</a>
-<br><a class=download href=download/Tankman_Windows_1.0.0.zip>Download for Windows (zip) &gt;&gt;&gt;</a>
-<br><a class=download href=download/Tankman_Mobile_1.0.0.apk>Download for Android &gt;&gt;&gt;</a>
-<br><br>Latest version: 1.0.0
+<a class=link href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a><br><br>
+<a class=download href=download/Tankman_1.1.0_setup.exe>Download for Windows (installer) &gt;&gt;&gt;</a>
+<br><a class=download href=download/Tankman_Windows_1.1.0.zip>Download for Windows (zip) &gt;&gt;&gt;</a>
+<br><a class=download href=download/Tankman_Mobile_1.1.0.apk>Download for Android &gt;&gt;&gt;</a>
+<br><br>Latest version: 1.1.0
 <br>
 </p>
 <div class=videoboxbox>
@@ -95,5 +108,6 @@ iframe {
 </tr>
 </table>
 </div>
+<table class="bottom"><tr class=bottomr><td class=bottomd>(C) 2019 Rasmulisone</td><td class=bottomd align=right><a style="color:#FFFFFF" href=mailto:rasmulisonegames@gmail.com>Contact me</a></td></tr></table>
 </body>
 </html>

@@ -13,3 +13,4 @@ https://rasmulisone.github.io/games/web/ballcatch/index.html
 https://rasmulisone.github.io/games/web/dice_roller/dice_roller_web.html
 https://rasmulisone.github.io/games/color_app.html
 https://rasmulisone.github.io/games/web/randompicker/randompicker_web.html
+https://rasmulisone.github.io/games/tankman.html
