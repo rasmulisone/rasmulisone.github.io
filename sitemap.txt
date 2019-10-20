@@ -1,5 +1,7 @@
 https://rasmulisone.github.io
 https://rasmulisone.github.io/channel.html
+https://rasmulisone.github.io/music.html
+https://rasmulisone.github.io/music/rocket_science.html
 https://rasmulisone.github.io/games.html
 https://rasmulisone.github.io/games/ballcatch.html
 https://rasmulisone.github.io/games/dice_roller.html
