@@ -55,31 +55,41 @@ table:not(.bottom), th, td {
 <link rel='icon' href='images/favicon.png' type='image/png'/>
 </head>
 <body>
-<img id="header-logo" src="images/rasmulisone.jpg">
+<img id="header-logo" width=500 src="images/rasmulisone.png">
 <hr>
 <div id="buttons"><a class="button" href="https://rasmulisone.github.io/channel.html">YouTube channel</a> <a class="button" href="https://rasmulisone.github.io/music.html">Music</a> <a class="button" href="https://rasmulisone.github.io/index.html">Homepage</a></div>
 <hr>
 <a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a>
 <h2>Dice Roller</h2>
-A simple dice roller application with unlimited number of dice and on Android a separate two-dice mode.<br>
-Made with: Sketchware (Android version) / Python 3 (Python 3 version) / HTML, CSS, JavaScript (web version)<br>
+A dice roller application with unlimited number of dice with the result of each individual die (in the Android version only up to 20) and the total result. The Python version also includes an average result mode.<br>
+Made with: Sketchware (Android version) / Python 3 (Python version) / HTML, CSS, JavaScript (web version)<br>
 Available platforms:
 <table>
 <tr>
 <th class="platforms">Platform</th><th class="platforms">Tested</th>
 </tr>
 <tr>
-<td>Android</td><td>4.4 KitKat<br>7.0 Nougat<br>8.1 Oreo<br>9.0 Pie</td>
+<td>Android</td><td>4.4 KitKat<br>7.0 Nougat<br>8.1 Oreo<br>9.0 Pie<br>10.0</td>
 </tr>
 <tr>
-<td>Python 3 (packages required: random)</td><td>3.5 on Windows<br>3.6 on Windows<br>3.7 on Windows<br>QPython3 (3.2) on Android</td>
+<td>Python 3 (packages required: random)</td><td>3.8.1 on Windows<br>QPython3 (3.2) on Android</td>
 </tr>
 <tr>
-<td>Web</td><td>Mozilla Firefox 62 on Windows<br>Mozilla Firefox 65 on Windows<br>Google Chrome 69 on Android<br>Google Chrome 70 on Android<br>Google Chrome 71 on Android<br>Google Chrome 69 on iOS</td>
+<td>Web</td><td>Google Chrome 87 on Windows<br>Mozilla Firefox 65 on Windows<br>Google Chrome 71 on Android<br>Google Chrome 69 on iOS</td>
 </tr>
 </table>
-Latest version: 1.5 (Android) / 1.1 (Python) / 1.3 (web)<br>
+Latest version: 1.5 (Android) / 1.1.1 (Python) / 1.4.0 (web)<br>
 What's new:<br>
+1.1.1 (Python)
+<ul>
+<li>Corrected word choice in the average result mode</li>
+</ul>
+1.4.0 (web)
+<ul>
+<li>Added 0.25 second flash of empty result text when rolling to make it easier to notice when the dice are rolled again if the result is the same as the previous result</li>
+<li>The quick buttons for 1, 2 and 5 dice now instantly roll that amount of dice instead of just putting the number in the textbox</li>
+<li>Removed unnecessary total result mode and the result mode checkboxes (the individual mode still shows the total result as well)</li>
+</ul>
 1.3 (web)
 <ul>
 <li>Added option to see the result of each dice separately</li>
@@ -146,8 +156,9 @@ Installing:
 </ul>
 <a href="web/dice_roller/dice_roller_web.html" class="download">Use in browser &gt;&gt;&gt;</a><br>
 <a href="download/Dice%20Roller%201.5.apk" class="download">Download for Android &gt;&gt;&gt;</a><br>
-<a href="download/diceroller-1.1.py" class="download">Download for Python 3 &gt;&gt;&gt;</a><br>
+<a href="download/diceroller-1.1.1.py" class="download">Download for Python 3 &gt;&gt;&gt;</a><br>
 All versions:<br>
+<a href="download/diceroller-1.1.1.py">Download 1.1.1 for Python 3 &gt;&gt;&gt;</a><br>
 <a href="download/Dice%20Roller%201.5.apk">Download 1.5 for Android &gt;&gt;&gt;</a><br>
 <a href="download/Dice%20Roller%201.4.1.apk">Download 1.4.1 for Android &gt;&gt;&gt;</a><br>
 <a href="download/Dice%20Roller%201.4.apk">Download 1.4 for Android &gt;&gt;&gt;</a><br>
@@ -160,8 +171,8 @@ All versions:<br>
 <a href="download/Dice%20Roller%201.0.apk">Download 1.0 for Android &gt;&gt;&gt;</a>
 <br><br><a href="https://www.amazon.com/gp/product/B0797YSTKT/ref=mas_pm_Dice_Roller"><img src="images/appstore.png" width=200></a>
 <br><br>
-(C) 2019 Rasmulisone Games
+(C) 2021 Rasmulisone Games
 <br><br><br>
-<table class="bottom"><tr><td>(C) 2019 Rasmulisone</td><td align=right><a style="color:#FFFFFF" href=mailto:rasmulisonegames@gmail.com>Contact me</a></td></tr></table>
+<table class="bottom"><tr><td>(C) 2021 Rasmulisone</td><td align=right><a style="color:#FFFFFF" href=mailto:rasmulisonegames@gmail.com>Contact me</a></td></tr></table>
 </body>
 </html>
