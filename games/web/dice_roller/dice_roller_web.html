@@ -13,13 +13,24 @@
 <script>
   var usdt = false;
   var firstRoll = true;
+  function start() {
+	changeTheme(0);
+	key();
+  }
+  function key() {
+	document.getElementById('amount').addEventListener("keyup", function(event) {
+		if (event.key === "Enter") {
+			roll_();
+		}
+	});
+  }	
   function Android() {
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1;
 	return isAndroid;
   }
   function changeTheme(button) {
-    if (Android() == true) {
+	if (Android() == true) {
 	  var meta = document.createElement('meta');
       meta.setAttribute("name", "theme-color");
       meta.setAttribute("content", "white");
@@ -78,6 +89,7 @@
     result = Math.floor(Math.random() * 6) + 1;
     return(result);
   }
+  
   function roll_() {
     document.getElementById('result').innerHTML = '&nbsp;';
 	document.getElementById('totalResult_').innerHTML = '&nbsp;';
@@ -116,7 +128,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onLoad="changeTheme(0)">
+<body onLoad="start()">
 <p align=center><a href="https://rasmulisone.github.io/games.html">&lt;&lt;&lt; Rasmulisone Games</a></p>
 <h2 align=center>Dice Roller for web</h2>
 <p align=center>
@@ -125,14 +137,13 @@
 <input type=button onclick="quickRoll(5)" value="5">
 <br><br><input type=number id="amount" value="1">
 <input type=button onclick="roll_()" value="Roll">
-<input type=button onclick="(document.getElementById('amount').value = '')" value="Clear">
 </p>
 <p align=center id="result" style="font-size:40">&nbsp;</p>
 <p align=center id="totalResult_" style="font-size:20">&nbsp;</p>
 <p align=center>
 <br><br><input type=button onclick="changeTheme(1)" value="Change theme">
 <br>By clicking the "Change theme" button you accept your theme preference being saved to your browser's local HTML web storage for this site to read the next time you visit.
-<br><br>Dice Roller for web - version 1.4.0<br>
+<br><br>Dice Roller for web - version 1.4.1<br>
 (C) 2021 Rasmulisone Games<br><br>
 Download versions for Python 3 and Android available <a href="https://rasmulisone.github.io/games/dice_roller.html">here</a>.</p>
 </body>
