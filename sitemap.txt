@@ -1,17 +1,11 @@
 https://rasmulisone.github.io
 https://rasmulisone.github.io/channel.html
 https://rasmulisone.github.io/music.html
-https://rasmulisone.github.io/music/rocket_science.html
-https://rasmulisone.github.io/music/creature_of_the_night.html
 https://rasmulisone.github.io/games.html
 https://rasmulisone.github.io/games/ballcatch.html
 https://rasmulisone.github.io/games/dice_roller.html
 https://rasmulisone.github.io/games/randompicker.html
-https://rasmulisone.github.io/games/rasbrowser.html
-https://rasmulisone.github.io/games/rascalculator.html
 https://rasmulisone.github.io/games/rasnotepad.html
-https://rasmulisone.github.io/games/rock_paper_scissors.html
-https://rasmulisone.github.io/games/spacecraft_launcher.html
 https://rasmulisone.github.io/games/web/ballcatch/index.html
 https://rasmulisone.github.io/games/web/dice_roller/dice_roller_web.html
 https://rasmulisone.github.io/games/color_app.html
